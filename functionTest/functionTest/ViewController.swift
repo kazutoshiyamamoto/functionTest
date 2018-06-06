@@ -14,10 +14,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        var name: String = "ビジター"
-        var level: Int = 1, point: Int = 10
-        name = "鈴木"
-        point = 50
+        var kokugo: Int
+        var sansu: Int
+        var goukei: Int
+        kokugo = 56
+        sansu = 67
+        goukei = kokugo + sansu
+        print(goukei)
     }
 
     override func didReceiveMemoryWarning() {
