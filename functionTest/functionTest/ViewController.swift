@@ -14,10 +14,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let rate: Double
-        let price: Double
-        rate = 1.02
-        price = 2500 * rate
+        var name: String = "ビジター"
+        var level: Int = 1, point: Int = 10
+        name = "鈴木"
+        point = 50
     }
 
     override func didReceiveMemoryWarning() {
