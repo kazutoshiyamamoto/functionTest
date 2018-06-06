@@ -9,25 +9,28 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        var kokugo: Int
-        var sansu: Int
-        var goukei: Int
-        kokugo = 56
-        sansu = 67
-        goukei = kokugo + sansu
-        print(goukei)
+        hello()
+        world()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    func hello() {
+        let lang = "Swift"
+        let msg = "ハロー" + lang
+        print(msg)
+    }
+    
+    func world() {
+        let msg = "ワールド"
+        print(msg)
+    }
 }
 
