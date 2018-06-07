@@ -13,8 +13,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        hello()
-        world()
+        kuji()
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,15 +21,20 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func hello() {
-        let lang = "Swift"
-        let msg = "ハロー" + lang
-        print(msg)
+    func kuji() {
+        // 1~10の乱数を作る
+        let num = arc4random_uniform(10) + 1
+        // numの値で処理を分岐する
+        if num >= 7 {
+            // numが7以上の時
+            let msg = "あたり"
+            print(num, msg)
+        } else {
+            // numが7未満の時
+            let msg = "はずれ"
+            print(num, msg)
+        }
     }
     
-    func world() {
-        let msg = "ワールド"
-        print(msg)
-    }
 }
 
