@@ -14,9 +14,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let product: (String, Int) = ("Swift", 2014)
-        var guest: (String, String, Int)
-        guest = ("大重","おおしげ", 1234)
+        let data = (1000, 80)
+        let (price, tax) = data
+        let kingaku = price + tax
+        print(kingaku)
     }
     
     override func didReceiveMemoryWarning() {
