@@ -14,12 +14,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let kosu = 5
-        let tanka = 2300
-        let tax = 1.08
-        let price = Double(tanka * kosu) * (1 + tax)
-        // 値の出力
-        print(price)
+        let subject = "理科"
+        let point = 82
+        let result = subject + String(point) + "点"
+        print(result)
     }
     
     override func didReceiveMemoryWarning() {
