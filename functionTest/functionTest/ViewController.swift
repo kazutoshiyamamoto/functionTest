@@ -15,9 +15,8 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         let data = (1000, 80)
-        let (price, tax) = data
-        let kingaku = price + tax
-        print(kingaku)
+        let (price, _) = data
+        print(price)
     }
     
     override func didReceiveMemoryWarning() {
