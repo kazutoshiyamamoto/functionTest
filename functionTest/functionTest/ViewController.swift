@@ -13,10 +13,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        var user = ("鈴木", 29)
-        user.1 = 30
-        print(user)
+
+        let kingaku = (price: 1000, tax: 80)
+        let seikyugaku = kingaku.price + kingaku.tax
+        print(seikyugaku)
     }
     
     override func didReceiveMemoryWarning() {
