@@ -14,15 +14,15 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let sugaku = arc4random_uniform(101)
-        let eigo = arc4random_uniform(101)
-        // 数学50点以上かつ英語60点以上が合格
-        if (sugaku >= 50)&&(eigo >= 60) {
-            print("おめでとう！合格")
+        let sugaku = 56
+        let eigo = 62
+        // 複数の条件式をカンマで区切ったif文
+        if sugaku >= 50, eigo >= 50, (sugaku + eigo) >= 120 {
+            print("合格", terminator: "／")
         } else {
-            print("残念、不合格")
+            print("不合格", terminator: "／")
         }
-        print("数学\(sugaku)、英語\(eigo)")
+        print("数学\(sugaku)、英語\(eigo)、合計\(sugaku + eigo)")
     }
     
     override func didReceiveMemoryWarning() {
