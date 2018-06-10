@@ -14,14 +14,19 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        // 0~100の乱数を作る
-        let tokuten = arc4random_uniform(101)
-        if tokuten >= 60 {
-            print("合格です！")
+        let sugaku = arc4random_uniform(101)
+        let eigo = arc4random_uniform(101)
+        // 数学50点以上かつ英語60点以上が合格
+        if sugaku >= 50 {
+            if eigo >= 60 {
+                print("合格です")
+            } else {
+                print("不合格です")
+            }
         } else {
-            print("不合格です。")
+            print("残念、不合格")
         }
-        print("\(tokuten)点でした。")
+        print("数学\(sugaku)、英語\(eigo)")
     }
     
     override func didReceiveMemoryWarning() {
