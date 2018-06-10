@@ -13,10 +13,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-
-        let tokuten = 85
-        if tokuten >= 80 {
-            print("素晴らしい！")
+        
+        // 0~100の乱数を作る
+        let tokuten = arc4random_uniform(101)
+        if tokuten >= 60 {
+            print("合格です！")
+        } else {
+            print("不合格です。")
         }
         print("\(tokuten)点でした。")
     }
