@@ -14,12 +14,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
-        var user: (name: String, age: Int, isPass: Bool)
-        user.name = "高田"
-        user.age = 23
-        user.isPass = true
-        print(user)
-        print(user.age)
+        let tokuten = 85
+        if tokuten >= 80 {
+            print("素晴らしい！")
+        }
+        print("\(tokuten)点でした。")
     }
     
     override func didReceiveMemoryWarning() {
