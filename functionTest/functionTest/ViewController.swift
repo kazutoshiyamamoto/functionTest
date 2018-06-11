@@ -14,18 +14,20 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
-        let theColor = "green"
-        switch theColor {
-        case "red","yellow":
-            print("赤と黄色は注意")
-        case "green":
-            print("緑は快適")
-        case "gray":
-            print("グレーは停止中")
-        default:
-            print("その他は順調")
+        // 20回繰り返す
+        for _ in 1...20 {
+            let num = arc4random_uniform(50)
+            print("\(num)", terminator: "")
+            // numで振り分ける
+            switch num {
+            case (10...15):
+                print(": 交換", terminator: "")
+            case 20, (31...35), 40:
+                print(": 再検査", terminator: "")
+            default:
+                print(": 合格", terminator: "")
+            }
         }
-        print(theColor)
     }
     
     override func didReceiveMemoryWarning() {
