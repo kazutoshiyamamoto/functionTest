@@ -13,20 +13,19 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-
-        // 20回繰り返す
-        for _ in 1...20 {
-            let num = arc4random_uniform(50)
-            print("\(num)", terminator: "")
-            // numで振り分ける
-            switch num {
-            case (10...15):
-                print(": 交換", terminator: "")
-            case 20, (31...35), 40:
-                print(": 再検査", terminator: "")
-            default:
-                print(": 合格", terminator: "")
-            }
+        
+        let size = (6, 11)
+        switch size {
+        case (0, 0):
+            print("幅高さともに0です")
+        case (5...10, 5...10):
+            print("規定サイズです")
+        case (_, 5...10):
+            print("高さ\(size.0)が規格外です")
+        case (5...10, _):
+            print("高さ\(size.1)が規格外です")
+        default:
+            print("幅高さともに規定外です")
         }
     }
     
