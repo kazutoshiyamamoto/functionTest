@@ -14,9 +14,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        for _ in 1...15 {
-            let num = arc4random_uniform(100)
-            print(num, terminator:"、")
+        for i in 0...2 {
+            for j in 0...2 {
+                let point = (5*i, 10*j)
+                print("\(i)-\(j)回目\(point)")
+            }
         }
     }
     
