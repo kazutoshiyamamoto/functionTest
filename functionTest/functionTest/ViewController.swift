@@ -14,12 +14,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        for i in 0...2 {
-            for j in 0...2 {
-                let point = (5*i, 10*j)
-                print("\(i)-\(j)回目\(point)")
-            }
+        let numList = [3,2,6,5,8,7,9]
+        var sum = 0
+        for num in numList {
+            sum += num
         }
+        print("合計\(sum)")
     }
     
     override func didReceiveMemoryWarning() {
