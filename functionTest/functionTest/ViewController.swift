@@ -14,9 +14,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        for num in 5...9 {
-            let value = num * 2
-            print(value, terminator:"、")
+        for _ in 1...15 {
+            let num = arc4random_uniform(100)
+            print(num, terminator:"、")
         }
     }
     
