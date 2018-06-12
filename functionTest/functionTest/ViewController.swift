@@ -14,12 +14,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let numList = [3,2,6,5,8,7,9]
-        var sum = 0
-        for num in numList {
-            sum += num
+        for num in stride(from: 10, to: 30, by: 3) {
+            print(num, terminator: ",")
         }
-        print("合計\(sum)")
     }
     
     override func didReceiveMemoryWarning() {
