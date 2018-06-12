@@ -14,18 +14,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let size = (4, 10)
+        let size = (45, 40, 100)
         switch size {
-        case (0, 0):
-            print("幅高さともに0です")
-        case (5...10, 5...10):
-            print("規定サイズです")
-        case (5...10, let height):
-            print("高さ\(height)が規格外です")
-        case (let width, 5...10):
-            print("高さ\(width)が規格外です")
+        case let (width, height, _) where (width >= 60) || (height >= 60):
+            print("規定外：幅高さのどちらかが60以上")
+        case let (_, _, weight) where (weight >= 80):
+            print("規定外：重さ80以上")
         default:
-            print("幅高さともに規定外です")
+            print("規定サイズ内")
         }
     }
     
