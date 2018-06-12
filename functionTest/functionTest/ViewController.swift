@@ -14,20 +14,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        var abc = (a:false, b:false, c:false)
-        let fall = "b"
-        switch fall {
-        case "a":
-            abc.a = true
-            fallthrough
-        case "b":
-            abc.b = true
-            fallthrough
-        case "c":
-            abc.c = true
-            fallthrough
-        default:
-            print(abc)
+        for num in 5...9 {
+            let value = num * 2
+            print(value, terminator:"、")
         }
     }
     
