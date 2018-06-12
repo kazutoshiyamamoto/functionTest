@@ -14,14 +14,20 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let size = (45, 40, 100)
-        switch size {
-        case let (width, height, _) where (width >= 60) || (height >= 60):
-            print("規定外：幅高さのどちらかが60以上")
-        case let (_, _, weight) where (weight >= 80):
-            print("規定外：重さ80以上")
+        var abc = (a:false, b:false, c:false)
+        let fall = "b"
+        switch fall {
+        case "a":
+            abc.a = true
+            fallthrough
+        case "b":
+            abc.b = true
+            fallthrough
+        case "c":
+            abc.c = true
+            fallthrough
         default:
-            print("規定サイズ内")
+            print(abc)
         }
     }
     
