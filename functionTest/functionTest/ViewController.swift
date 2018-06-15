@@ -14,17 +14,15 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let vlist = [3,5,-2,6,-8,2]
-        var total = 0
-        for v in vlist {
-            //負の値はスキップする
-            if v<0 {
-                continue
+        var num: UInt32 = 0
+        // 無限に繰り返す
+        while true {
+            num = arc4random_uniform(100)
+            if num > 70 {
+                break // 70より大きな値が出たらブレイクする
             }
-            total += v
-            print("\(v)")
         }
-        print("合計：\(total)")
+        print(num)
     }
     
     override func didReceiveMemoryWarning() {
