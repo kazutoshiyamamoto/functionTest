@@ -14,9 +14,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        for num in stride(from: 10, to: 30, by: 3) {
-            print(num, terminator: ",")
+        var tickets = 5
+        var power = 30
+        while (tickets>0)&&(power<100) {
+            tickets -= 1
+            power += 20
         }
+        print("power \(power)、残チケット\(tickets)")
     }
     
     override func didReceiveMemoryWarning() {
