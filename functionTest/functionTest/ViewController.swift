@@ -14,15 +14,15 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        var num: UInt32 = 0
-        // 無限に繰り返す
-        while true {
-            num = arc4random_uniform(100)
-            if num > 70 {
-                break // 70より大きな値が出たらブレイクする
+        xloop: for x in 0...3 {
+            yloop: for y in 0...3 {
+                if (x < y) {
+                    print("-------")
+                    continue xloop
+                }
+                print((x, y))
             }
         }
-        print(num)
     }
     
     override func didReceiveMemoryWarning() {
