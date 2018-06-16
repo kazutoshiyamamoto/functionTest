@@ -26,6 +26,10 @@ class ViewController: UIViewController {
     }
     
     func half(num: Double) {
+        // 最後に必ず実行する
+        defer {
+            print("計算終了")
+        }
         // 処理を中断
         guard num >= 10 else {
             // numが10以上でない時関数から抜ける
