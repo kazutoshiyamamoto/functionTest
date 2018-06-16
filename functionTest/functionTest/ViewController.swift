@@ -14,9 +14,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        func dice() -> Int {
-            let number = 1 + arc4random_uniform(6)
-            return Int(number)
+        for _ in 1...5 {
+            let num = dice()
+            print(num)
         }
     }
     
@@ -25,6 +25,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func dice() -> Int {
+        let number = 1 + arc4random_uniform(6)
+        return Int(number)
+    }
     
 }
 
