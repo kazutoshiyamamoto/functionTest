@@ -14,17 +14,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let vlist: Array = [[4,2],[5],[9,8,10],[6,8,-9],[4,2],[9,3]]
-        // vlistを定義する
-        outloop:for alist in vlist {
-            // vlistから取り出したalistを走査する
-            inloop:for v in alist {
-                // マイナスの値があれば出力して中断する
-                if v < 0 {
-                    print(alist)
-                    break outloop
-                }
-            }
+        func dice() -> Int {
+            let number = 1 + arc4random_uniform(6)
+            return Int(number)
         }
     }
     
