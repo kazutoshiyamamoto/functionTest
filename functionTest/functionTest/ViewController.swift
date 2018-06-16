@@ -14,9 +14,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        thanks(num: 5)
-        thanks(num: 0)
-        thanks(num: 2)
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -24,12 +22,15 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func thanks(num: Int) {
-        if num <= 0 {
+    func half(num: Double) {
+        // 処理を中断
+        guard num >= 10 else {
+            // numが10以上でない時関数から抜ける
             return
         }
-        print("\(num)個。ありがとうございました。")
+        // 値を半分にして出力する
+        let halfNum = num/2
+        print("\(num)の半分は\(halfNum)")
     }
-    
 }
 
