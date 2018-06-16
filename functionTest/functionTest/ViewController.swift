@@ -14,10 +14,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        for _ in 1...5 {
-            let num = dice()
-            print(num)
-        }
+        thanks(num: 5)
+        thanks(num: 0)
+        thanks(num: 2)
     }
     
     override func didReceiveMemoryWarning() {
@@ -25,9 +24,11 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func dice() -> Int {
-        let number = 1 + arc4random_uniform(6)
-        return Int(number)
+    func thanks(num: Int) {
+        if num <= 0 {
+            return
+        }
+        print("\(num)個。ありがとうございました。")
     }
     
 }
