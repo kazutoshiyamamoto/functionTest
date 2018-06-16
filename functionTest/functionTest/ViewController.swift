@@ -14,7 +14,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-
+        // 半分の値を出力する
+        half(num: 25)
+        half(num: 9)
+        half(num: 12)
     }
     
     override func didReceiveMemoryWarning() {
