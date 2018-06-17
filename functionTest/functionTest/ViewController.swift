@@ -22,8 +22,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func price0() -> Int {
-        let ninzu = 3
+    func price1(ninzu: Int) -> Int {
         let tanka = 1200
         let result = tanka * ninzu
         return result
