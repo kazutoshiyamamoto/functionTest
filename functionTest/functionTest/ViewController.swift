@@ -14,7 +14,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let price = price1(ninzu: 5)
+        let price = price2(ninzu: 3, tanka: 1300)
         print(price)
 
     }
@@ -24,8 +24,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func price1(ninzu: Int) -> Int {
-        let tanka = 1200
+    func price2(ninzu: Int, tanka: Int) -> Int {
         let result = tanka * ninzu
         return result
     }
