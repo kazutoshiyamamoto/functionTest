@@ -14,7 +14,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-
+        let goukei = sum(numbers: 5,6,7,8,9)
+        print(goukei)
 
     }
     
