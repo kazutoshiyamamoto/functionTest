@@ -14,8 +14,17 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        let ex1 = price3(tanka: 1000)
+        print("\(ex1)円")
+        
+        let ex2 = price3(tanka: 1000, kosu: 2)
+        print("\(ex2)円")
+        
+        let ex3 = price3(tanka: 2500, souryou: 1500)
+        print("\(ex3)円")
 
-
+        let ex4 = price3(tanka: 1200, kosu: 5, souryou: 0)
+        print("\(ex4)円")
     }
     
     override func didReceiveMemoryWarning() {
