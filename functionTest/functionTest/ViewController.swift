@@ -14,6 +14,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        let result = testResult(kokugo: 80, sugaku: 68, eigo: 72)
+        print("合計\(result.total)")
+        print("平均\(result.average)")
         
         
     }
