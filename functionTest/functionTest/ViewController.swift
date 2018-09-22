@@ -19,7 +19,6 @@ class ViewController: UIViewController {
             let num = dice()
             print(num)
         }
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -32,7 +31,5 @@ class ViewController: UIViewController {
         let number = 1 + arc4random_uniform(6)
         return Int(number)
     }
-
-    
 }
 
