@@ -14,9 +14,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let result = testResult(kokugo: 80, sugaku: 68, eigo: 72)
-        print("合計\(result.total)")
-        print("平均\(result.average)")
+
         
         
     }
@@ -26,11 +24,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func testResult(kokugo: Int, sugaku: Int, eigo: Int) -> (total: Int, average: Double) {
-        let total = kokugo + sugaku + eigo
-        var ave = Double(total)/3
-        ave = round(ave*10)/10
-        return (total, ave)
+    // 1~6の中から整数を1個選んで返す
+    func dice() -> Int {
+        let number = 1 + arc4random_uniform(6)
+        return Int(number)
     }
 
     
