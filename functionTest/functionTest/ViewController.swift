@@ -14,8 +14,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-
-        
+        // dice()を5回実行する
+        for _ in 1...5 {
+            let num = dice()
+            print(num)
+        }
         
     }
     
