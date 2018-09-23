@@ -14,11 +14,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        // dice()を5回実行する
-        for _ in 1...5 {
-            let num = dice()
-            print(num)
-        }
+        //        // dice()を5回実行する
+        //        for _ in 1...5 {
+        //            let num = dice()
+        //            print(num)
+        //        }
+                
+        print(num2)
     }
     
     override func didReceiveMemoryWarning() {
@@ -26,10 +28,16 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    // 1~6の中から整数を1個選んで返す
-    func dice() -> Int {
-        let number = 1 + arc4random_uniform(6)
-        return Int(number)
+    //    // 1~6の中から整数を1個選んで返す
+    //    func dice() -> Int {
+    //        let number = 1 + arc4random_uniform(6)
+    //        return Int(number)
+    //    }
+    
+    // クロージャ
+    let num2 = {() -> Int in
+        let num3 = 1 + arc4random_uniform(6)
+        return Int(num3)
     }
 }
 
