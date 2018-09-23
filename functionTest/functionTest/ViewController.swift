@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         //            print(num)
         //        }
         
-        print(num2())
+        num2()
     }
     
     override func didReceiveMemoryWarning() {
@@ -37,8 +37,8 @@ class ViewController: UIViewController {
     // クロージャ
     let num2 = {() -> Void in
         for _ in 1...5 {
-            let test = Int(1 + arc4random_uniform(6))
-            print(test)
+            let randomNum = Int(1 + arc4random_uniform(6))
+            print(randomNum)
         }
     }
 }
