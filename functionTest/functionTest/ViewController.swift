@@ -20,6 +20,7 @@ class ViewController: UIViewController {
         //            print(num)
         //        }
         
+        // クロージャで定義した処理の出力テスト
         num2()
     }
     
@@ -34,7 +35,7 @@ class ViewController: UIViewController {
     //        return Int(number)
     //    }
     
-    // クロージャ
+    // クロージャで定義
     let num2 = {() -> Void in
         for _ in 1...5 {
             let randomNum = Int(1 + arc4random_uniform(6))
